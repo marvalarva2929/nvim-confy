@@ -3,7 +3,7 @@ local M = {}
 function M.config()
     local cfg = {
 
-            transparent_background = true, -- disables setting the background color.
+        transparent_background = true,-- disables setting the background color.
 
         compile = {
             enabled = true,

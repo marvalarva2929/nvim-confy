@@ -3,8 +3,8 @@ local M = {}
 				"clangd",
                 "omnisharp",
                 "tsserver",
-                "pylsp",
                 "lua-language-server",
+                "pylsp",
             }
 
 
