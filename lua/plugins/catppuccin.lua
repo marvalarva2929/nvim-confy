@@ -1,7 +1,7 @@
-local M = {}
-
-function M.config()
-    local cfg = {
+return {
+	'catppuccin/nvim',
+	config = function ()
+		local cfg = {
 
         transparent_background = true,-- disables setting the background color.
 
@@ -59,11 +59,10 @@ function M.config()
             }
         end,
     }
-    
     vim.g.catppuccin_flavour = "macchiato"
     require("catppuccin").setup(cfg)
 
     vim.cmd([[colorscheme catppuccin]])
-end
 
-return M
+	end
+}
