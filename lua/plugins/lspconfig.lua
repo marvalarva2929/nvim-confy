@@ -32,21 +32,21 @@ return {
 
             require('mason-lspconfig').setup {
                 ensure_installed = {
-                    'bashls',
-                    'cssls',
-                    'dprint',
                     'eslint',
-                    'jsonls',
                     'lua_ls',
                     'pyright',
-                    'rust_analyzer',
-                    'taplo',
-                    'vtsls',
+					'grammarly'
                 },
                 handlers = {
                     function(server)
                         lspconfig[server].setup { capabilities = capabilities() }
                     end,
+					grammarly = function()
+						lspconfig.grammarly.setup {
+							capabilities = capabilities(),
+							init_options = { clientId = 'client_BaDkMgx4X19X9UxxYRCXZo', },
+						}
+					end,
                     clangd = function()
                         lspconfig.clangd.setup {
                             capabilities = vim.tbl_deep_extend('error', capabilities(), {
