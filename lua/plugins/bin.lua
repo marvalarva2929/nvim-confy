@@ -1,0 +1,3 @@
+return {
+	"riccolong/hexview.nvim",
+}

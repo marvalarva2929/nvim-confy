@@ -3,8 +3,6 @@ return {
 	config = function ()
 		local cfg = {
 
-        transparent_background = true,-- disables setting the background color.
-
         compile = {
             enabled = true,
         },
@@ -12,9 +10,9 @@ return {
             --treesitter = true,
         },
         dim_inactive = {
-            enabled = true,
+            enabled = false,
             shade = "dark",
-            percentage = 1,
+            percentage = 0.15,
         },
 
         custom_highlights = function(colors)

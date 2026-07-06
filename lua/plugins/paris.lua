@@ -1,6 +1,6 @@
 
 return {
-	dir="~/Projects/templar",
+	dir="~/templode/",
 	name="templar",
 	config=function ()
 		require('templode').setup()

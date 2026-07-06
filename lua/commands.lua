@@ -1,3 +1,8 @@
+vim.api.nvim_create_user_command('Cld', function()
+    require('claude_workspace').toggle()
+end, { desc = 'Toggle Claude Workspace', nargs = 0 })
+vim.cmd('cnoreabbrev cld Cld')
+
 vim.api.nvim_create_user_command('Todos', function()
     require('fzf-lua').grep { search = [[TODO:|todo!\(.*\)]], no_esc = true }
 end, { desc = 'Grep TODOs', nargs = 0 })
